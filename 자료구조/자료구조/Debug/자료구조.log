@@ -1,0 +1,4 @@
+﻿  스택 구현.c
+C:\Users\user\Desktop\Study\자료구조\자료구조\자료구조\스택 구현.c(9,4): warning C4033: 'push'은(는) 값을 반환해야 합니다.
+C:\Users\user\Desktop\Study\자료구조\자료구조\자료구조\스택 구현.c(12): warning C4716: 'push': 값을 반환해야 합니다.
+  자료구조.vcxproj -> C:\Users\user\Desktop\Study\자료구조\자료구조\Debug\자료구조.exe
