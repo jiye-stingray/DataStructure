@@ -21,5 +21,14 @@
     <ClCompile Include="스택 구현.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="선형큐 구현.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="원형 큐.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="연결리스트.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
