@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <malloc.h>
+#include <stdlib.h>
 #pragma warning(disable:4996)
 typedef struct listnode {
 	int data;
@@ -23,12 +24,12 @@ int main() {
 		newnode->data = n;
 		newnode->link = NULL;
 		if (newnode->data < 0) break; //음수
+
 		//if 헤드가 NULL
 		if (head == NULL)
 		{
 			head = newnode;
 			tail = newnode;
-	
 		}
 		else {
 			tail->link = newnode;
@@ -37,12 +38,33 @@ int main() {
 		cnt++;
 	}
 
-	node* temp = head; 
+	while (1)		// 삭제하는 함수
+	{
+		int d;
+		node * p = head;
+		node* tmp = p;
+		printf("삭제할 node 번호를 입력해주세요\n");
+		scanf("%d", &d);
+		if (d <= 0) break;
+		for (int i = 1; i <= cnt; i++)
+		{
+			if (i == d) {
+				tmp->link = p->link;
+				free(p); 
+				cnt--;  break;
+			}
+			tmp = p;
+			p = p->link;
+		}
+	}
+	
+
+	node* temp = head;
 	for (int i = 0; i < cnt; i++)
 	{
 		printf("%d번째 data: ", i + 1);
 		printf("%d\n", temp->data);
 		temp = temp->link;
 	}
-	
+
 }

@@ -23,26 +23,27 @@ int main() {
 		newnode->data = n;
 		newnode->link = NULL;
 		if (newnode->data < 0) break; //음수
+
 		//if 헤드가 NULL
 		if (head == NULL)
 		{
 			head = newnode;
 			tail = newnode;
-	
 		}
 		else {
-			tail->link = newnode;
+			newnode->link = head;
+			tail = head;
+			head = newnode;
 		}
-		tail = newnode;
 		cnt++;
 	}
 
-	node* temp = head; 
+	node* temp = head;
 	for (int i = 0; i < cnt; i++)
 	{
 		printf("%d번째 data: ", i + 1);
 		printf("%d\n", temp->data);
 		temp = temp->link;
 	}
-	
+
 }
