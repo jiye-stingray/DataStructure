@@ -36,5 +36,11 @@
     <ClCompile Include="연결리스트 삭제.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="연결 리스트 구현.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="원형 연결 리스트.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
