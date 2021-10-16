@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #pragma warning(disable:4996)
 typedef struct listnode {
-	int data;
+	char data[10];
 	struct listnode* link;
 }node;
 node* head = NULL;
@@ -15,9 +15,9 @@ void insert_node() {
 	while (1) //data 입력
 	{
 		node* newnode = (node*)malloc(sizeof(node));
-		int n;
-		scanf("%d", &n);
-		newnode->data = n;
+		char n[10];
+		scanf("%s", &n);
+		//->data = n;
 		newnode->link = NULL;
 		if (newnode->data < 0) //음수
 			return;
@@ -61,31 +61,30 @@ void print_node() {
 	//출력
 	node* temp = head;
 	temp = head;
-	for (int i = 0; i < cnt; i++)
-	{
-		
-	}
-	printf("%d\n", tail->link->data);
 
-	while (1)
+	int num;
+	printf("몇번 째 청소당번이 궁금하신가요?");
+	scanf("%s\n", &num);
+	int cnt = 0;
+	for (int i = 1; i <= cnt; i++)
 	{
-		int i = 0;
-		printf("%d번째 data: ", i + 1);
-		printf("%d\n", temp->data);
-		i++;
+		if (i == cnt)
+			printf("%s", temp->data);
+		cnt++;
 		temp = temp->link;
-		if (temp->data == NULL)
-			return;
 	}
+	
+
+
 }	 //출력함수
 int main() {
-	
 
-	
+
+
 	while (1)
 	{
 		int n;
-		printf("데이터를 입력하고 싶으면 1, 삭제하고 싶으면 2, 리스트를 출력하고 싶으면 3, 그만두고 싶으면 -1를 입력하세요\n");
+		printf("청소 당번을 입력하고 싶으면 1, 삭제하고 싶으면 2, 청소당번을 출력하고 싶으면 3, 그만두고 싶으면 -1를 입력하세요\n");
 		scanf("%d", &n);
 		switch (n)
 		{
@@ -100,5 +99,5 @@ int main() {
 	}
 
 	return;
-	
+
 }
