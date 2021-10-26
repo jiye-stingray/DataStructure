@@ -35,10 +35,29 @@ void print_node() {
 		temp = temp->next;
 	}
 }
+void free_node() {
+	int num;
+	printf("삭제할 노드 번호를 입력하세요");
+	scanf("%d", &num);
+	num++;
+	node* temp = head;
+	for (int i = 0; i < num; i++)
+	{
+		temp = temp->next;
+	}
+	node* p = temp->prev;
+	node* n = temp->next;
+
+	p->next = n;
+	n->prev = p;
+
+	free(temp);
+	
+}
 int main() {
 
 	insert_node();
-	
+	free_node();
 
 	print_node();
 }

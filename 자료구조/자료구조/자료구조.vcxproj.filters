@@ -51,5 +51,8 @@
     <ClCompile Include="이진트리 배열.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="연결스택.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
